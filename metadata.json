@@ -1,0 +1,8 @@
+{
+  "name": "Advice Generator App",
+  "description": "A pixel-perfect, accessible, and responsive Frontend Mentor Advice Generator App built with HTML, CSS, JavaScript, and the Advice Slip API.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

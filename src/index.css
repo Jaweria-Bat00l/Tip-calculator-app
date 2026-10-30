@@ -1,0 +1,60 @@
+@import "tailwindcss";
+
+:root {
+  --color-light-cyan: hsl(193, 38%, 86%);
+  --color-neon-green: hsl(150, 100%, 66%);
+  --color-grayish-blue: hsl(217, 19%, 38%);
+  --color-dark-grayish-blue: hsl(217, 19%, 24%);
+  --color-dark-blue: hsl(218, 23%, 16%);
+}
+
+body {
+  font-family: 'Manrope', -apple-system, BlinkMacSystemFont, sans-serif;
+  background-color: var(--color-dark-blue);
+  color: var(--color-light-cyan);
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+
+/* Advice dice button */
+.dice-btn {
+  background-color: var(--color-neon-green);
+  border: none;
+  border-radius: 9999px;
+  width: 4rem;
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  outline: none;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 50%);
+}
+
+.dice-btn:hover {
+  box-shadow: 0 0 36px var(--color-neon-green);
+}
+
+.dice-btn:focus-visible {
+  outline: 2px solid var(--color-light-cyan);
+  outline-offset: 4px;
+  box-shadow: 0 0 36px var(--color-neon-green);
+}
+
+.dice-btn.loading svg {
+  animation: spinDice 0.6s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+@keyframes spinDice {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <title>Frontend Mentor | Tip calculator app</title>
+
+  <!-- Google Fonts: Space Mono 700 -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Brand Logo Header -->
+  <header class="app-header">
+    <img src="./images/logo.svg" alt="SPLITTER Tip Calculator Logo" class="logo" width="87" height="54">
+  </header>
+
+  <!-- Main Calculator Widget -->
+  <main>
+    <article class="calculator-card">
+      
+      <!-- Input Section (Left) -->
+      <section class="form-section" aria-label="Bill and tip details">
+        
+        <!-- Bill Input Group -->
+        <div class="form-group">
+          <label for="bill" class="form-label">Bill</label>
+          <div class="input-wrapper">
+            <img src="./images/icon-dollar.svg" alt="" aria-hidden="true" class="input-icon">
+            <input 
+              type="number" 
+              id="bill" 
+              class="input-field" 
+              placeholder="0" 
+              min="0" 
+              step="0.01"
+              autocomplete="off"
+            >
+          </div>
+        </div>
+
+        <!-- Tip Percentage Selection Group -->
+        <div class="form-group">
+          <span class="form-label">Select Tip %</span>
+          <div class="tip-grid">
+            <button type="button" class="tip-button" data-tip="5">5%</button>
+            <button type="button" class="tip-button" data-tip="10">10%</button>
+            <button type="button" class="tip-button" data-tip="15">15%</button>
+            <button type="button" class="tip-button" data-tip="25">25%</button>
+            <button type="button" class="tip-button" data-tip="50">50%</button>
+            <input 
+              type="number" 
+              id="custom-tip" 
+              class="custom-tip-input" 
+              placeholder="Custom" 
+              min="0" 
+              max="1000"
+              autocomplete="off"
+            >
+          </div>
+        </div>
+
+        <!-- Number of People Input Group -->
+        <div class="form-group" id="people-group">
+          <div class="label-row">
+            <label for="people" class="form-label">Number of People</label>
+            <span class="error-message">Can't be zero</span>
+          </div>
+          <div class="input-wrapper">
+            <img src="./images/icon-person.svg" alt="" aria-hidden="true" class="input-icon">
+            <input 
+              type="number" 
+              id="people" 
+              class="input-field" 
+              placeholder="0" 
+              min="0" 
+              step="1"
+              autocomplete="off"
+            >
+          </div>
+        </div>
+
+      </section>
+
+      <!-- Display Section (Right) -->
+      <section class="display-section" aria-label="Tip and total per person calculation results">
+        
+        <div class="result-list">
+          <!-- Tip Amount Per Person -->
+          <div class="result-item">
+            <div class="result-label">
+              <span class="result-title">Tip Amount</span>
+              <span class="result-subtitle">/ person</span>
+            </div>
+            <div class="result-value" id="tip-amount">$0.00</div>
+          </div>
+
+          <!-- Total Amount Per Person -->
+          <div class="result-item">
+            <div class="result-label">
+              <span class="result-title">Total</span>
+              <span class="result-subtitle">/ person</span>
+            </div>
+            <div class="result-value" id="total-amount">$0.00</div>
+          </div>
+        </div>
+
+        <!-- Reset Button -->
+        <button type="button" id="reset-btn" class="reset-button" disabled>RESET</button>
+
+      </section>
+
+    </article>
+  </main>
+  
+  <footer class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank" rel="noopener noreferrer">Frontend Mentor</a>. 
+    Coded by <a href="https://github.com" target="_blank" rel="noopener noreferrer">Batool Jaweria</a>.
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

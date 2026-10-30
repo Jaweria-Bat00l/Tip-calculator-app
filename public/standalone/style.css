@@ -1,0 +1,212 @@
+/* ==========================================================================
+   Frontend Mentor - Social Links Profile
+   Pure CSS Implementation (Style Guide compliant)
+   ========================================================================== */
+
+/* Font face definitions for local hosting */
+@font-face {
+  font-family: 'Inter';
+  src: url('./assets/fonts/Inter-VariableFont_slnt,wght.ttf') format('truetype');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  /* Colors from style-guide.md */
+  --color-green: hsl(75, 94%, 57%);
+  --color-white: hsl(0, 0%, 100%);
+  --color-grey-700: hsl(0, 0%, 20%);
+  --color-grey-800: hsl(0, 0%, 12%);
+  --color-grey-900: hsl(0, 0%, 8%);
+
+  /* Typography */
+  --font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-size-body: 14px;
+}
+
+/* Reset & Box Sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-family);
+  font-size: var(--font-size-body);
+  background-color: var(--color-grey-900);
+  color: var(--color-white);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 24px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Main Container */
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+/* Profile Card */
+.profile-card {
+  background-color: var(--color-grey-800);
+  border-radius: 12px;
+  width: 100%;
+  max-width: 384px;
+  padding: 40px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+/* Avatar Image */
+.profile-avatar {
+  width: 88px;
+  height: 88px;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+  margin-bottom: 24px;
+}
+
+/* Profile Name */
+.profile-name {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--color-white);
+  line-height: 1.2;
+  margin-bottom: 6px;
+}
+
+/* Profile Location */
+.profile-location {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--color-green);
+  margin-bottom: 24px;
+}
+
+/* Profile Bio */
+.profile-bio {
+  font-size: 14px;
+  font-weight: 400;
+  color: #c5c5c5;
+  margin-bottom: 24px;
+  line-height: 1.4;
+}
+
+/* Social Links Navigation & List */
+.social-links {
+  width: 100%;
+}
+
+.social-links-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+}
+
+/* Social Link Button */
+.social-link-item a {
+  display: block;
+  width: 100%;
+  background-color: var(--color-grey-700);
+  color: var(--color-white);
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+  padding: 13px 16px;
+  border-radius: 8px;
+  transition: background-color 0.18s ease, color 0.18s ease, transform 0.18s ease, box-shadow 0.18s ease;
+  outline: none;
+}
+
+/* Interactive States: Hover & Focus */
+.social-link-item a:hover,
+.social-link-item a:focus-visible {
+  background-color: var(--color-green);
+  color: var(--color-grey-900);
+  cursor: pointer;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 14px rgba(196, 248, 42, 0.25);
+}
+
+.social-link-item a:active {
+  transform: translateY(0);
+}
+
+.social-link-item a:focus-visible {
+  outline: 2px solid var(--color-green);
+  outline-offset: 3px;
+}
+
+/* Attribution Footer */
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  color: #888888;
+  margin-top: 24px;
+  padding: 12px 0;
+}
+
+.attribution a {
+  color: var(--color-green);
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+
+.attribution a:hover {
+  text-decoration: underline;
+  opacity: 0.9;
+}
+
+/* Responsive Mobile Layout (375px) */
+@media (max-width: 480px) {
+  body {
+    padding: 16px;
+  }
+
+  .profile-card {
+    max-width: 327px;
+    padding: 24px;
+  }
+
+  .profile-avatar {
+    width: 88px;
+    height: 88px;
+    margin-bottom: 20px;
+  }
+
+  .profile-name {
+    font-size: 22px;
+  }
+
+  .profile-location {
+    margin-bottom: 20px;
+  }
+
+  .profile-bio {
+    margin-bottom: 20px;
+  }
+
+  .social-links-list {
+    gap: 14px;
+  }
+}
